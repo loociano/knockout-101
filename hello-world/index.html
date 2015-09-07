@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hello Knockout</title>
-  <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
-  <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
-
-  <style>
-    body {
-      margin: 8px;
-    }
-  </style>
-</head>
-
-<body>
+<link rel="import" href="../common/head.html">
 
   <form id="myForm">
     <p>First name: <input name="firstName" data-bind="value: firstName" /></p>
@@ -22,21 +8,14 @@
 
   <script src="js/model.js"></script>
 
-  <div id="mocha"></div>
+<link rel="import" href="../common/foot.html">
 
-  <script src="../node_modules/mocha/mocha.js"></script>
-  <script src="../node_modules/chai/chai.js"></script> 
+<div id="mocha"></div>
 
-  <script>
-    mocha.ui('bdd');
-    mocha.reporter('html');
-    var expect = chai.expect;
-  </script>
-
-  <script src="test/tests.js"></script>
-  <script>
-      mocha.run();
-  </script>
+<script src="test/tests.js"></script>
+<script>
+    mocha.run();
+</script>
 
 </body>
 </html>
