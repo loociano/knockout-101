@@ -9,6 +9,4 @@ var ViewModel = function(first, last) {
     }, this);
 };
  
-(function(){
-  ko.applyBindings(new ViewModel("Luciano", "Rubio")); // This makes Knockout get to work
-})();
+ko.applyBindings(new ViewModel("Luciano", "Rubio");); // This makes Knockout get to work
