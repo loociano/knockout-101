@@ -2,16 +2,41 @@
 <html>
 <head>
   <title>Hello Knockout</title>
-  <script src="../js/lib/knockout-3.3.0.js"></script>
+  <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+  <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+
+  <style>
+    body {
+      margin: 8px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <p>First name: <input data-bind="value: firstName" /></p>
-  <p>Last name: <input data-bind="value: lastName" /></p>
-  <h2>Hello, <span data-bind="text: fullName"> </span>!</h2>
+  <form id="myForm">
+    <p>First name: <input name="firstName" data-bind="value: firstName" /></p>
+    <p>Last name: <input name="lastName" data-bind="value: lastName" /></p>
+    <h2>Hello, <span id="fullName" data-bind="text: fullName"></span>!</h2>
+  </form>
 
   <script src="js/model.js"></script>
+
+  <div id="mocha"></div>
+
+  <script src="../node_modules/mocha/mocha.js"></script>
+  <script src="../node_modules/chai/chai.js"></script> 
+
+  <script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    var expect = chai.expect;
+  </script>
+
+  <script src="test/tests.js"></script>
+  <script>
+      mocha.run();
+  </script>
 
 </body>
 </html>
