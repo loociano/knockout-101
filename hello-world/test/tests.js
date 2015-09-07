@@ -22,3 +22,15 @@ describe('DOM tests', function() {
   });
 
 });
+
+describe('ViewModel tests', function(){
+
+  it('should set the data model', function(){
+    var viewModel = new ViewModel('Luciano', 'Rubio');
+
+    expect(viewModel.firstName()).to.equal('Luciano');
+    expect(viewModel.lastName()).to.equal('Rubio');
+    expect(viewModel.fullName()).to.equal('Luciano Rubio');
+  });
+
+});
