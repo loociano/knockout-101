@@ -1,0 +1,27 @@
+{
+  "name": "knockout-camp",
+  "version": "1.0.0",
+  "main": "index.html",
+  "description": "Testing Knockout with Mocha"
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loociano/knockout-camp.git"
+  },
+  "author": "Luciano Rubio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loociano/knockout-camp/issues"
+  },
+  "homepage": "https://github.com/loociano/knockout-camp#readme",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "knockout": "^3.3.0",
+    "mocha": "^2.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.1"
+  }
+}
