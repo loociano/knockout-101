@@ -2,7 +2,7 @@
   "name": "knockout-camp",
   "version": "1.0.0",
   "main": "index.html",
-  "description": "Testing Knockout with Mocha"
+  "description": "Testing Knockout with Mocha",
   "directories": {
     "test": "test"
   },
