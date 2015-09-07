@@ -1,0 +1,37 @@
+<link rel="import" href="../common/head.html">
+
+<form data-bind="submit: addItem">
+    New item:
+    <input id="item-field" data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' />
+    <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+    <p>Your items:</p>
+    <select multiple="multiple" width="50" data-bind="options: items"> </select>
+</form>
+
+<script>
+var SimpleListModel = function(items) {
+    this.items = ko.observableArray(items);
+    this.itemToAdd = ko.observable("");
+    this.addItem = function() {
+        if (this.itemToAdd() != "") {
+            this.items.push(this.itemToAdd()); // Adds the item. Writing to the "items" observableArray causes any associated UI to update.
+            this.itemToAdd(""); // Clears the text box, because it's bound to the "itemToAdd" observable
+        }
+    }.bind(this);  // Ensure that "this" is always this view model
+};
+ 
+var viewModel = new SimpleListModel(["Alpha", "Beta", "Gamma"]);
+ko.applyBindings(viewModel);
+</script>
+
+<link rel="import" href="../common/foot.html">
+
+<div id="mocha"></div>
+
+<script src="test/tests.js"></script>
+<script>
+    mocha.run();
+</script>
+
+</body>
+</html>
