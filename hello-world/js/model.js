@@ -12,7 +12,3 @@ var ViewModel = function(first, last) {
 (function(){
   ko.applyBindings(new ViewModel("Luciano", "Rubio")); // This makes Knockout get to work
 })();
-
-if(typeof exports !== 'undefined') {
-    exports.ViewModel = ViewModel;
-}
